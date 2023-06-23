@@ -1,0 +1,79 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slidecontainer {
+	position: relative;
+	width: 70%;
+	#value {
+		font-family: "Montserrat", sans-serif;
+		position: absolute;
+		height: 70px;
+		width: 70px;
+		top: -4.25em;
+		margin: auto;
+		background: dodgerblue;
+		padding: 0;
+		border-radius: 50%;
+		color: #fff;
+		border: 5px solid orange;
+		font-size: 1.5em;
+		text-align: center;
+		line-height: 2.5;
+		box-shadow: 0 1px 1px hsl(0deg 0% 0%/.075), 0 2px 2px hsl(0deg 0% 0%/.075), 0 4px 4px hsl(0deg 0% 0%/.075), 0 8px 8px hsl(0deg 0% 0%/.075), 0 16px 16px hsl(0deg 0% 0%/.075);
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -40px;
+			left: calc(50% - 20px);
+			border-top: 20px solid orange;
+			border-bottom: 20px solid transparent;
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+		}
+	}
+	.slider {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 100%;
+		height: 25px;
+		background: #d3d3d3;
+		outline: none;
+		opacity: 0.7;
+		-webkit-transition: 0.2s;
+		transition: opacity 0.2s;
+		border-radius: 15px;
+		box-shadow: 0 1px 1px hsl(0deg 0% 0%/.075), 0 2px 2px hsl(0deg 0% 0%/.075), 0 4px 4px hsl(0deg 0% 0%/.075), 0 8px 8px hsl(0deg 0% 0%/.075), 0 16px 16px hsl(0deg 0% 0%/.075);
+		&:hover {
+			opacity: 1;
+		}
+		/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 45px;
+			height: 45px;
+			background: dodgerblue;
+			cursor: pointer;
+			border-radius: 50%;
+			border: 2px solid orange;
+		}
+		&::-moz-range-thumb {
+			width: 45px;
+			height: 4∂5px;
+			background: dodgerblue;
+			cursor: pointer;
+			border-radius: 50%; 
+		}
+	}
+}
