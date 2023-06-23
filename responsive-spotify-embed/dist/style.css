@@ -1,0 +1,36 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: #1C1E1D;
+  display: flex;
+  align-items: center;
+}
+
+.spotify-embeds {
+  width: 100%;
+  padding: 50px;
+}
+
+.spotify-embed {
+  background: #282828;
+}
+.spotify-embed:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+.spotify-embed iframe {
+  display: block;
+  transition: opacity 0.125s;
+}
+.js .spotify-embed iframe {
+  opacity: 0;
+}
+.js .spotify-embed iframe.loaded {
+  opacity: 1;
+}
