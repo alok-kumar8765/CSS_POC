@@ -1,0 +1,62 @@
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#leaf {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 0 50%;
+  cursor: pointer;
+  background-color: green;
+  background: linear-gradient(
+    45deg,
+    rgba(51, 255, 80, 1) 0%,
+    rgba(0, 162, 23, 1) 50%,
+    rgba(150, 244, 83, 1) 51%,
+    rgba(85, 221, 49, 1) 100%
+  );
+  transform-origin: bottom right;
+  transition: transform 500ms ease-in-out 0s;
+}
+#leaf::after,
+#leaf::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  background: linear-gradient(
+    45deg,
+    rgba(51, 255, 80, 1) 0%,
+    rgba(0, 162, 23, 1) 50%,
+    rgba(150, 244, 83, 1) 51%,
+    rgba(85, 221, 49, 1) 100%
+  );
+  border-radius: 0 50%;
+  transform-origin: bottom right;
+  transition: transform 500ms ease-in-out 0s, box-shadow 500ms ease-in-out 0s;
+}
+#leaf::after {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+}
+#leaf:hover::before {
+  transform: rotate(30deg);
+}
+#leaf:hover::after {
+  transform: rotate(15deg);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+}
+
+#leaf:hover {
+  transform: translateX(-50%) rotate(30deg);
+}
